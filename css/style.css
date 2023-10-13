@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #000000, #4e4e4e);
+    height: 100vh;
+    overflow: hidden;
+}
+.login_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    box-shadow: 0 0 500px 20px white;
+    background: white;
+    border-radius: 10px;
+}
+
+.login_box h1{
+    text-align: center;
+    color: black;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.login_box form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    transition: 0.2s;
+    font-size: 16px;
+    pointer-events: none
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #9845f7;
+    transition: 0.5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    font-size: small;
+    color: #9845f7;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+.forgot a{
+    margin: 50px 0 -20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+    text-decoration: none;
+}
+.forgot a:hover{
+    text-decoration: underline;
+    color: #9845f7;
+}
+.loginBtn{
+    display: flex;
+    justify-content: center;
+}
+.loginBtn input{
+    height: 50px;
+    width: 500px;
+    font-size: large;
+    border: none;
+    border-radius: 25px;
+    margin-top: 40px;
+    background-color: rgb(231, 231, 231);
+    color: #9845f7;
+    cursor: pointer;
+    transition: .3s;
+}
+.loginBtn input:hover{
+    background-color: #9845f7;
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 5px 4px #9845f7;
+}
+.signup_link{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+.signup_link a{
+    text-decoration: none;
+    color: #9845f7;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}
